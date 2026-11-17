@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Diet Tracker: Daily Weight, Meals &amp; Habits</title>
+  <meta name="description" content="Personal diet tracker: log weight, calories, protein, water, steps and habits, follow a 7-day Kerala meal plan and see weekly progress. Works offline.">
+  <!-- Private health tracker: keep it out of search engines. -->
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#166534" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f1a14" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Diet Tracker">
+  <meta property="og:description" content="Log weight, meals and habits daily and track weekly progress. Works offline on your phone.">
+  <meta property="og:image" content="icons/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="icons/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Diet Tracker">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <h1 class="brand"><span class="logo" aria-hidden="true"></span>Diet Tracker</h1>
+    <span id="saved" class="saved" role="status" aria-live="polite"></span>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section id="view-today" class="view" aria-label="Today"></section>
+    <section id="view-plan" class="view" aria-label="Meal plan" hidden></section>
+    <section id="view-progress" class="view" aria-label="Progress" hidden></section>
+    <section id="view-settings" class="view" aria-label="Settings" hidden></section>
+    <noscript><p class="card">This tracker needs JavaScript turned on.</p></noscript>
+  </main>
+
+  <nav class="tabbar" aria-label="Main">
+    <button type="button" data-tab="today" aria-current="page">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+      <span>Today</span>
+    </button>
+    <button type="button" data-tab="plan">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11h16a8 8 0 0 1-16 0Z"/><path d="M9 7c0-2 2-2 2-4M14 7c0-2 2-2 2-4"/></svg>
+      <span>Meal plan</span>
+    </button>
+    <button type="button" data-tab="progress">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18"/><path d="m4 15 5-5 4 3 7-7"/></svg>
+      <span>Progress</span>
+    </button>
+    <button type="button" data-tab="settings">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg>
+      <span>Settings</span>
+    </button>
+  </nav>
+
+  <div id="toast" class="toast" role="alert" hidden></div>
+</body>
+</html>

@@ -1,0 +1,3 @@
+# Private personal health tracker: ask all crawlers (search engines and AI bots) not to index it.
+User-agent: *
+Disallow: /

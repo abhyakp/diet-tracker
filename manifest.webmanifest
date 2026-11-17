@@ -1,0 +1,23 @@
+{
+  "id": "./",
+  "name": "Diet Tracker",
+  "short_name": "Diet Tracker",
+  "description": "Log weight, meals, water, steps and habits daily, follow a 7-day Kerala meal plan and track weekly progress. Works offline.",
+  "start_url": "./#today",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f4f7f5",
+  "theme_color": "#166534",
+  "categories": ["health", "fitness", "lifestyle"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ],
+  "shortcuts": [
+    { "name": "Log today", "url": "./#today", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Progress", "url": "./#progress", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] }
+  ]
+}
